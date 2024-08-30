@@ -1,8 +1,6 @@
 ---
 name: slack_webhook_basic
 on: 
-  pull:
-    branches: [ master ]
   commit:
     branches: [ master ]
   push:
