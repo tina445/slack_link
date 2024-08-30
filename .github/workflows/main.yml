@@ -1,11 +1,10 @@
 ---
 name: slack_webhook_basic
-on: 
+on:
   push:
-    branches: [ master ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ master ]
-  
+    branches: [ "main" ]
 jobs:
   build:
     name: Build and Test
@@ -29,7 +28,5 @@ jobs:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       with:
         status: ${{job.status}}
-        fields: action, repo, commit, author, message, workflow, job, eventName, ref
+        fields: repo,message,workflow,job,ref, commit
         author_name: Github Action Slack
-      
-    
