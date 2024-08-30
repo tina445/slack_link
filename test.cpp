@@ -11,33 +11,6 @@ bool digit(string str) {
     return true;
 }
 
-string make_str(string str){
-
-    string ret  = "";
-    int cnt{};
-
-
-
-    return ret;
-
-}
-
-string make_str3(string str){
-
-    string ret  = "";
-    int cnt{};
-
-    for (int i = 0; i < str.size()-1; i++) {
-        ret += str[i];
-        if(++cnt % 3 == 0) ret ;
-    }
-
-    ret += str[str.size()-1];
-
-    return ret;
-
-}
-
 int main() {
     string str, ret{}, sig; 
     int err{};
